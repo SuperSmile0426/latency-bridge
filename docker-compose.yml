@@ -18,6 +18,9 @@ services:
   your_api:
     build: ./your_api
     environment:
+      THIRD_PARTY: "http://thirdparty:3000"
+      CLIENT: "http://client:3100"
+      WEBHOOK: "http://your_api:3200/hookTxStatus"
       PORT: 3200
     ports:
       - "3200:3200"
