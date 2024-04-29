@@ -2,12 +2,22 @@ version: "3.8"
 services:
   thirdparty:
     build: ./thirdpartymock
+    environment:
+      PORT: 3000
     ports:
       - "3000:3000"
 
   client:
     build: ./client
     environment:
-      YOUR_API: "http://thirdparty:3000" # replace with your new API
+      PORT: 3100
+      YOUR_API: "http://your_api:3200" # replace with your new API
     ports:
       - "3100:3100"
+
+  your_api:
+    build: ./your_api
+    environment:
+      PORT: 3200
+    ports:
+      - "3200:3200"

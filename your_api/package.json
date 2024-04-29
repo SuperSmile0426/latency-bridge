@@ -1,0 +1,16 @@
+{
+    "name": "your_api",
+    "version": "1.0.0",
+    "description": "A bridge between the mobile cliend and the third-party.",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Djamo",
+    "license": "ISC",
+    "dependencies": {
+      "axios": "^1.4.0",
+      "express": "^4.18.2"
+    }
+  }
+  
